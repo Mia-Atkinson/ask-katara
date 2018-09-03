@@ -1,0 +1,15 @@
+service: ask-katara-alexa-skill
+
+#frameworkVersion: ">=1.4.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: python2.7
+  region: us-west-2
+
+
+functions:
+  ask_katara:
+    handler: ask_katara.lambda_handler
+    events:
+      - alexaSkill: amzn1.ask.skill.0e284372-1b7e-406f-9e1f-502c259bf986
