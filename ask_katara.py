@@ -1,7 +1,7 @@
 from __future__ import print_function
 import boto3
 import datetime
-days_off = 4
+off_days = 4
 
 def lambda_handler(event, context):
     if (event['session']['application']['applicationId'] != "amzn1.ask.skill.0e284372-1b7e-406f-9e1f-502c259bf986"):
@@ -22,16 +22,18 @@ def on_intent(intent_request, session):
     reprompt_text = "What is reprompt text for?"
 
     if intent_name == "WhosAGoodDog" :
-        speech_output = good_dog_response
+        speech_output = good_dog_response()
     else :
-        speech_output = medicine_response
+        speech_output = medicine_response()
 
     return build_response(session_attributes, build_speechlet_response(
         card_title, speech_output, reprompt_text, should_end_session))
-def good_dog_response:
+
+def good_dog_response():
     return "Yes, they're good dogs"
 
-def medicine_response:
+def medicine_response():
+    global off_days
     first_dose = datetime.date(2018,8,23)  #year, month, day
     days_left = datetime.date.today()-first_dose
     if (days_left.days % off_days) == 0 :

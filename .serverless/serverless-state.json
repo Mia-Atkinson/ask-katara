@@ -106,7 +106,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/ask-katara-alexa-skill/dev/1536015852411-2018-09-03T23:04:12.411Z/ask-katara-alexa-skill.zip"
+                "S3Key": "serverless/ask-katara-alexa-skill/dev/1536026861851-2018-09-04T02:07:41.851Z/ask-katara-alexa-skill.zip"
               },
               "FunctionName": "ask-katara-alexa-skill-dev-ask_katara",
               "Handler": "ask_katara.lambda_handler",
@@ -125,14 +125,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "AskUnderscorekataraLambdaVersionqoEHFOGtKh10bUrlAqZ5xi4ivf1MnMWzFuxdynWLNak": {
+          "AskUnderscorekataraLambdaVersionzW3BzZuK6DDw5Qk8XHJOMCxjdG8MWZ5va427v6Y": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AskUnderscorekataraLambdaFunction"
               },
-              "CodeSha256": "RAZ0R5Bcr00C+GVz9Br7dGsouFdZIMPI2YpeJHMLDxo="
+              "CodeSha256": "jU1nsl6rKsV4bs1C0Z0F5x1lIENa+dIGwJh63c5T2B0="
             }
           },
           "AskUnderscorekataraLambdaPermissionAlexaSkill1": {
@@ -159,7 +159,7 @@
           "AskUnderscorekataraLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AskUnderscorekataraLambdaVersionqoEHFOGtKh10bUrlAqZ5xi4ivf1MnMWzFuxdynWLNak"
+              "Ref": "AskUnderscorekataraLambdaVersionzW3BzZuK6DDw5Qk8XHJOMCxjdG8MWZ5va427v6Y"
             }
           }
         }
@@ -202,7 +202,7 @@
     "artifact": "/Users/miaatkinson/ask_katara/.serverless/ask-katara-alexa-skill.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/ask-katara-alexa-skill/dev/1536015852411-2018-09-03T23:04:12.411Z",
+    "artifactDirectoryName": "serverless/ask-katara-alexa-skill/dev/1536026861851-2018-09-04T02:07:41.851Z",
     "artifact": "ask-katara-alexa-skill.zip"
   }
 }
